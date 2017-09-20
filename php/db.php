@@ -3,10 +3,17 @@
 
 function db_r_connect ()
 {
+	/*jslaptop
     $dbServerName = "localhost";
     $dbUserName = "entryform_web";
     $dbPassword = 'ef$web';
     $dbName = "entryform";
+*/
+    $dbServerName = "sql9.cpt4.host-h.net";
+    $dbUserName = "semmesmhtt";
+    $dbPassword = 'g8f82B837P8';
+    $dbName = "semmesmhtt_web1";
+    //mysql -usemmesmhtt -pg8f82B837P8 -hsql9.cpt4.host-h.net semmesmhtt_web1
 
     // Create connection
     $dbConn = new mysqli($dbServerName, $dbUserName, $dbPassword, $dbName);

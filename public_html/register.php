@@ -2,6 +2,7 @@
 include_once "../php/form.php";
 include_once "../php/user.php";
 include_once "../php/page.php";
+include_once "../php/member.php";
 
 UserInit ($User);
 UserInit ($UserErr);
@@ -43,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   //account: If specified, must exist
   if (!empty($_POST["account"])) {
     $User['account'] = FormSanitiseInput($_POST["account"]);
-    if (!AccountLoad ($User['account'], $Account))
+    if (!MemberAccountExists ($User['account']))
     {
         $UserErr['account'] = "Account does not exist. Leave empty if not know.";
         $hasErr = true;
